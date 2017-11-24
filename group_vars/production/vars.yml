@@ -1,0 +1,17 @@
+### Production environment settings
+
+# STS role and target account
+Sts.Role: arn:aws:iam::543279062384:role/admin
+
+# Network settings
+Stack.Inputs.VpcName: Default
+
+# Application settings
+Stack.Inputs.ApplicationDesiredCount: 2
+Stack.Inputs.ApplicationImageId: ami-f8ec3f80
+Stack.Inputs.ApplicationInstanceType: t2.micro
+Stack.Inputs.KeyName: docker-production-aws
+
+# Proxy settings
+Stack.Inputs.ProxyImage: 543279062384.dkr.ecr.us-west-2.amazonaws.com/dockerproductionaws/squid
+Stack.Inputs.ProxyWhitelist: .dockerproductionaws.org
